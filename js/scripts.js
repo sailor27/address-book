@@ -15,6 +15,10 @@ Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
+Address.prototype.fullAddress = function() {
+  return this.street + ", " + this.street + ", " + this.state;
+}
+
 //front end logic
 $(document).ready(function() {
 
@@ -67,7 +71,7 @@ $(document).ready(function() {
       $(".last-name").text(newContact.lastName);
       $("ul#addresses").text("");
       newContact.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.state + "</li>");
+        $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
       });
     });
   });
