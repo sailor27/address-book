@@ -2,7 +2,7 @@
 function Contact(first, last) {
   this.firstName = first;
   this.lastName = last;
-  this.addresses = [0];
+  this.addresses = [];
 }
 
 function Address(street, city, state) {
